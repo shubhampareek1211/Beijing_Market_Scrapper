@@ -23,9 +23,9 @@ class SSECompanyAPISpider(scrapy.Spider):
             'X-Requested-With': 'XMLHttpRequest',
         },
         'ITEM_PIPELINES': {
-            'sse_scraper.pipelines.DataCleaningPipeline': 100,
-            'sse_scraper.pipelines.CsvWriterPipeline': 300,
-            'sse_scraper.pipelines.JsonWriterPipeline': 400,
+            'scrapers.shanghai.pipelines.DataCleaningPipeline': 100,
+            'scrapers.shanghai.pipelines.CsvWriterPipeline': 300,
+            'scrapers.shanghai.pipelines.JsonWriterPipeline': 400,
         }
     }
 

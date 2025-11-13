@@ -2,8 +2,8 @@
 
 BOT_NAME = 'sse_scraper'
 
-SPIDER_MODULES = ['sse_scraper.spiders']
-NEWSPIDER_MODULE = 'sse_scraper.spiders'
+SPIDER_MODULES = ['scrapers.shanghai.spiders']
+NEWSPIDER_MODULE = 'scrapers.shanghai.spiders'
 
 # Crawl responsibly by identifying yourself
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -49,10 +49,10 @@ EXTENSIONS = {
 
 # Configure item pipelines
 ITEM_PIPELINES = {
-    #'sse_scraper.pipelines.DataCleaningPipeline': 100,
-    'sse_scraper.pipelines.DuplicateFilterPipeline': 200,
-    'sse_scraper.pipelines.CsvWriterPipeline': 300,
-    'sse_scraper.pipelines.JsonWriterPipeline': 400,
+    #'scrapers.shanghai.pipelines.DataCleaningPipeline': 100,
+    'scrapers.shanghai.pipelines.DuplicateFilterPipeline': 200,
+    'scrapers.shanghai.pipelines.CsvWriterPipeline': 300,
+    'scrapers.shanghai.pipelines.JsonWriterPipeline': 400,
 }
 
 # Enable and configure HTTP caching

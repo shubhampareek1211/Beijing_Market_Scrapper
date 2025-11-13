@@ -1,7 +1,7 @@
 
 BOT_NAME = "cninfo_pipeline"
-SPIDER_MODULES = ["cninfo_pipeline.spiders"]
-NEWSPIDER_MODULE = "cninfo_pipeline.spiders"
+SPIDER_MODULES = ["scrapers.cninfo.spiders"]
+NEWSPIDER_MODULE = "scrapers.cninfo.spiders"
 
 ROBOTSTXT_OBEY = False
 
@@ -24,14 +24,14 @@ DEFAULT_REQUEST_HEADERS = {
 
 
 DOWNLOADER_MIDDLEWARES = {
-    "cninfo_pipeline.middlewares.UserAgentMiddleware": 400,
+    "scrapers.cninfo.middlewares.UserAgentMiddleware": 400,
 }
 
 ITEM_PIPELINES = {
-    "cninfo_pipeline.pipelines.normalization.NormalizationPipeline": 100,
-    "cninfo_pipeline.pipelines.dedupe.DedupePipeline": 200,
-    "cninfo_pipeline.pipelines.qa.QAPipeline": 300,
-    "cninfo_pipeline.pipelines.export.SnapshotExportPipeline": 800,
+    "scrapers.cninfo.pipelines.normalization.NormalizationPipeline": 100,
+    "scrapers.cninfo.pipelines.dedupe.DedupePipeline": 200,
+    "scrapers.cninfo.pipelines.qa.QAPipeline": 300,
+    "scrapers.cninfo.pipelines.export.SnapshotExportPipeline": 800,
 }
 
 import os, datetime
