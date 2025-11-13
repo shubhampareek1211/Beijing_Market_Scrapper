@@ -1,0 +1,14 @@
+# Unified Market Scraper Dependencies
+# For Beijing, CNINFO, and Shanghai Stock Exchange scrapers
+
+# Core scraping framework
+scrapy>=2.11.0
+
+# Scrapy utilities
+itemadapter>=0.8.0
+
+# For Beijing scraper (uses standard library urllib)
+# No additional dependencies required
+
+# Optional: Better data handling
+pandas>=1.5.0
